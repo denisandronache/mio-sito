@@ -1,4 +1,3 @@
-
 body {
     background-image: url("img/sfondo.jpg");
     background-size: cover;
@@ -37,7 +36,8 @@ h2 {
     color: gray;
 }
 
-.bottone {
+.bottone,
+.menu2 a {
     display: inline-block;
     background: rgb(3, 129, 187);
     color: white;
@@ -49,9 +49,11 @@ h2 {
     border: 2px solid transparent;
     transition: all 0.3s ease;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
-.bottone:hover {
+.bottone:hover,
+.menu2 a:hover {
     background: rgb(255, 217, 0);
     color: black;
     transform: translateY(-3px);
@@ -66,24 +68,6 @@ h2 {
     max-width: 800px;
 }
 
-.menu2 a {
-    display: inline-block;
-    background: rgb(3, 129, 187);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 14px;
-    margin: 4px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.menu2 a:hover {
-    background: rgb(255, 217, 0);
-    color: black;
-    transform: translateY(-2px);
-}
-
 @keyframes entra {
     from {
         opacity: 0;
@@ -93,6 +77,65 @@ h2 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* --- AGGIUNTE PER DIARIO, TABELLA E TEMA SCURO --- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    color: #222222;
+}
+
+th, td {
+    border: 1px solid #999999;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: rgb(3, 129, 187);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #eef3f8;
+}
+
+.presente {
+    background: #c8f0d2 !important;
+    color: #114422;
+    font-weight: bold;
+}
+
+.assente {
+    background: #f6c9c9 !important;
+    color: #661111;
+    font-weight: bold;
+}
+
+#riepilogo {
+    background: white;
+    color: #222222;
+    border: 2px solid rgb(3, 129, 187);
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+body.scuro {
+    background-image: none;
+    background-color: #12121f;
+    color: #ffffff;
+}
+
+body.scuro .scheda {
+    background-color: #1e1e2f;
+    color: #ffffff;
+}
+
+body.scuro h1, body.scuro h2 {
+    color: #ffd166;
 }
 
 @media (max-width: 600px) {
@@ -113,27 +156,9 @@ h2 {
         display: block;
         text-align: center;
     }
-}
 
-.bottone,
-.menu2 a {
-    display: inline-block;
-    background: rgb(3, 129, 187);
-    color: white;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 5px 4px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-}
-
-.bottone:hover,
-.menu2 a:hover {
-    background: rgb(255, 217, 0);
-    color: black;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    th, td {
+        padding: 4px;
+        font-size: 14px;
+    }
 }
